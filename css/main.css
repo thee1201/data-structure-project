@@ -9,8 +9,8 @@ body {background-color: #c8cbcf;}
 
 h1 {
     text-align: center;
-    font-size: 65pt;
-    margin-block: 50px 0px;
+    font-size: 55pt;
+    margin-block: 10px 0px;
 }
 h1 > span {
     background: linear-gradient(to right, #232526, #414345);
@@ -21,7 +21,16 @@ h2 {
     text-align: center;
     color: #414345;
     font-size: 40pt;
-    margin-block: 0;
+    margin-block: 0 10px;
+}
+
+#back-button {
+    position: absolute;
+    right: 5%;
+    bottom: 6%;
+    text-decoration: none;
+    font-size: 20pt;
+    color: #8b8f94;
 }
 
 #main {
@@ -79,4 +88,18 @@ a {
 img {
     width: 100%;
     /* padding: 20px 30px; */
+}
+
+.structure-container {
+    text-align: center;
+}
+
+button {
+    padding: 3px 39px;
+    font-size: 20pt;
+    border: 0;
+    border-radius: 6px;
+    color: #414345;
+    background-color: #a7aaae;
+    &:hover {background-color: #8b8f94;}
 }

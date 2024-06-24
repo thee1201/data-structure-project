@@ -4,13 +4,22 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/stack.css">
     <title>Data Structure Stack</title>
 </head>
 <body>
     <div id="main-container">
         <h1><span>Data Structure Visualization</span></h1>
         <h2>Stack</h2>
-        
+        <div class="structure-container">
+            <svg id="stack-draw"></svg>
+            <div class="action-button">
+                <button onclick="pushStack()">push</button>
+                <button onclick="popStack()">pop</button>
+                <button onclick="initStack()">init</button>
+            </div>
+        </div>
+        <a id="back-button" href="main.html" target="_parent">back ></a>
     </div>
 </body>
 </html>
