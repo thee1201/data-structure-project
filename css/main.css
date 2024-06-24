@@ -1,20 +1,27 @@
 @import url('https://fonts.googleapis.com/css2?family=Jersey+10&family=Jersey+15+Charted&display=swap');
 * {
-    background-color: #c8cbcf;
     font-family: "Jersey 10", sans-serif;
     font-weight: 400;
     font-style: normal;
 }
 
+body {background-color: #c8cbcf;}
+
 h1 {
     text-align: center;
     font-size: 65pt;
-    margin-block: 50px;
+    margin-block: 50px 0px;
 }
 h1 > span {
     background: linear-gradient(to right, #232526, #414345);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
+}
+h2 {
+    text-align: center;
+    color: #414345;
+    font-size: 40pt;
+    margin-block: 0;
 }
 
 #main {
@@ -26,31 +33,50 @@ h1 > span {
 }
 
 .list-space {
-    /* width: 100%; */
+    width: 80%;
     display: block;
     list-style-type: none;
     padding-left: 0;
-    /* clear: both; */
+    clear: both;
 }
 
 .list-space > li {
     display: block;
     float: left;
-    margin-inline: 25px;
+    /* margin-inline: 25px; */
     color: #414345;
     text-align: center;
     font-size: 25pt;
+    width: 23.68%;
 }
 
 .list-space > li > .li-wapper {
     background-color: #babdc2;
-    width: 100px;
+    padding-top: 25px;
+    padding-inline: 10px;
+    padding-bottom: 10px;
+    margin-left: 50px;
+    margin-bottom: 20px;
+    /* height: 200px; */
     &:hover {
         cursor: pointer;
         background-color: #abb1b9;
     }
 }
 
+a {
+    text-decoration: none;
+    color: inherit;
+    display: inline-block;
+    align-items: center;
+}
 .thumbnail {
-    
+    display: block;
+    position: relative;
+    /* margin: 0px 0px 10px 10px; */
+}
+
+img {
+    width: 100%;
+    /* padding: 20px 30px; */
 }
