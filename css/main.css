@@ -94,14 +94,14 @@ img {
     text-align: center;
 }
 
-.blcok {
+.block {
     background-color: #c1c3c8;
     width: 217px;
     height: 84px;
     border: solid 6px #414345;
     border-radius: 15px;
 }
-.blcok > p {
+p {
     font-size: 30pt;
     color: #232526;
 }
