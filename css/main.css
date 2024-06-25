@@ -101,5 +101,6 @@ button {
     border-radius: 6px;
     color: #414345;
     background-color: #a7aaae;
+    margin-inline: 10px;
     &:hover {background-color: #8b8f94;}
 }
