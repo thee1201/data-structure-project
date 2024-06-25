@@ -1,0 +1,13 @@
+.notice {
+    background-color: #c1c3c8;
+    width: 1000px;
+    height: 200px;
+    border: solid 6px #414345;
+    border-radius: 15px;
+    text-align: center;
+    margin-left: 250px;
+    margin-top: 100px;
+}
+p{
+    font-size: 48pt;
+}
