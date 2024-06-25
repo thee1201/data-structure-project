@@ -11,7 +11,7 @@ class SinglyLinkedList {
         this.size = 0;
     }
 
-    add(value) {
+    insert(value) {
         const newNode = new SinglyNode(value);
         if (this.head === null) {
             this.head = newNode;
@@ -55,7 +55,37 @@ class SinglyLinkedList {
         listDraw.innerHTML = '';
         let current = this.head;
         while (current !== null) {
-            
+            const node = document.createElement('div');
+            node.className = 'node';
+            const p = document.createElement('p');
+            p.textContent = current.value;
+            node.appendChild(p);
+            listDraw.appendChild(node);
+
+            if (current.next !== null) {
+                const arrow = document.createElement('div');
+                arrow.className = 'arrow';
+                arrow.textContent = '>';
+                listDraw.appendChild(arrow);
+            }
+
+            current = current.next;
         }
     }
+}
+
+const singlyLinkedList = new SinglyLinkedList();
+let singlyNextValue = 1;
+
+function insertLL() {
+    singlyLinkedList.insert(singlyNextValue++);
+}
+
+function removeLL() {
+    singlyLinkedList.remove();
+}
+
+function initLL() {
+    singlyLinkedList.init();
+    singlyNextValue = 1;
 }

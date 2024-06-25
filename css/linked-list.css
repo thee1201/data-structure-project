@@ -1,13 +1,15 @@
 #list-draw {
+    margin-top: 50px;
     margin-left: 9px;
     margin-bottom: 10px;
-    background-color: #ffff;
+    /* background-color: #ffff; */
     width: 1500px;
-    height: 454px;
+    height: 415px;
     position: relative;
     display: flex;
     flex-direction: row;
-    
+    flex-wrap: wrapx;
+    align-content: space-between;
 }
 
 button {
@@ -20,4 +22,30 @@ button {
     background-color: #a7aaae;
     margin-inline: 10px;
     &:hover {background-color: #8b8f94;}
+}
+
+.node {
+    margin-left: 20px;
+    /* background-color: #ffff; */
+    width: 115px;
+    height: 90px;
+    position: relative;
+    display: flex;
+    /* justify-content: center; */
+    align-items: center;
+}
+p {
+    margin: 0;
+    font-size: 40pt;
+    width: 60px;
+    height: 60px;
+    border: solid 6px #414345;
+    border-radius: 10px;
+    background-color: #c1c3c8;
+}
+.arrow {
+    color: #414345;
+    text-align: center;
+    font-size: 36pt;
+    /* margin-left: 20px; */
 }
