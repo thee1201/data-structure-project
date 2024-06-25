@@ -1,0 +1,23 @@
+#list-draw {
+    margin-left: 9px;
+    margin-bottom: 10px;
+    background-color: #ffff;
+    width: 1500px;
+    height: 454px;
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    
+}
+
+button {
+    width: 160px;
+    padding: 3px 39px;
+    font-size: 20pt;
+    border: 0;
+    border-radius: 6px;
+    color: #414345;
+    background-color: #a7aaae;
+    margin-inline: 10px;
+    &:hover {background-color: #8b8f94;}
+}
