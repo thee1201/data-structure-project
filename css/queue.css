@@ -1,12 +1,17 @@
 #queue-draw {
     /* background-color: #ffff; */
     width: 1280px;
-    height: 240px;
+    height: 143px;
     border-style: solid;
     border-color: #414345;
     border-width: 6px 0px 6px 0px;
     margin-left: 7.8%;
-    margin-block: 60px;
+    margin-block: 150px 60px;
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    /* align-items: center; */
+    justify-content: left;
 }
 
 button {
@@ -19,4 +24,11 @@ button {
     background-color: #a7aaae;
     margin-inline: 10px;
     &:hover {background-color: #8b8f94;}
+}
+
+.block {
+    margin: 23.5px 5px;
+}
+p {
+    margin-block: 22.5px;
 }

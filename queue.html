@@ -6,20 +6,29 @@
     <link rel="stylesheet" href="css/main.css">
     <link rel="stylesheet" href="css/queue.css">
     <title>Data Structure Queue</title>
+    <script src="js/queue.js"></script>
 </head>
 <body>
     <div id="main-container">
         <h1><span>Data Structure Visualization</span></h1>
         <h2>Queue</h2>
         <div class="structure-container">
-            <div id="queue-draw"></div>
+            <div id="queue-draw">
+                <!-- <div class="block"><p>1</p></div>
+                <div class="block"><p>1</p></div>
+                <div class="block"><p>1</p></div>
+                <div class="block"><p>1</p></div>
+                <div class="block"><p>1</p></div>
+                <div class="block"><p>1</p></div>
+                <div class="block"><p>1</p></div> -->
+            </div>
             <div class="action-button">
-                <button onclick="pushStack()">enqueue</button>
-                <button onclick="popStack()">dequeue</button>
-                <button onclick="initStack()">init</button>
+                <button onclick="enqueueQueue()">enqueue</button>
+                <button onclick="dequeueQueue()">dequeue</button>
+                <button onclick="initQueue()">init</button>
             </div>
         </div>
-        <a id="back-button" href="main.html" target="_parent">back ></a>
+        <a id="back-button" href="main.html" target="_parent">< back</a>
     </div>
 </body>
 </html>
