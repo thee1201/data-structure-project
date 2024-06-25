@@ -1,66 +1,43 @@
 let stack = [];
 let nextValue = 1;
-const canvas = document.getElementById("stack-draw");
-const ctx = canvas.getContext("2d");
 
+const stackElement = document.getElementById('stack-draw');
+
+// 스택 시각화 함수
+function drawStack() {
+    stackElement.innerHTML = '';
+
+    for (let i = stack.length - 1; i >= 0; i--) {
+        const block = document.createElement('div');
+        block.classList.add('block');
+        block.textContent = stack[i];
+        stackElement.appendChild(block);
+    }
+}
+
+// Push 버튼 클릭 시 호출될 함수
 function pushStack() {
-  stack.push(nextValue++);
-  updateStack();
+    stack.push(nextValue);
+    nextValue++;
+    drawStack();
 }
 
+// Pop 버튼 클릭 시 호출될 함수
 function popStack() {
-  if (stack.length > 0) {
-    stack.pop();
-    nextValue--;
-    updateStack();
-  }
+    if (stack.length > 0) {
+        stack.pop();
+        drawStack();
+    } else {
+        alert('Stack is empty!');
+    }
 }
 
+// Init 버튼 클릭 시 호출될 함수
 function initStack() {
-  stack = [];
-  nextValue = 1;
-  updateStack();
+    stack = [];
+    nextValue = 1; // 다음 값 초기화
+    drawStack();
 }
 
-function drawRoundedRect(ctx, x, y, width, height, radius) {
-    ctx.beginPath();
-    ctx.moveTo(x + radius, y);
-    ctx.lineTo(x + width - radius, y);
-    ctx.quadraticCurveTo(x + width, y, x + width, y + radius);
-    ctx.lineTo(x + width, y + height - radius);
-    ctx.quadraticCurveTo(x + width, y + height, x + width - radius, y + height);
-    ctx.lineTo(x + radius, y + height);
-    ctx.quadraticCurveTo(x, y + height, x, y + height - radius);
-    ctx.lineTo(x, y + radius);
-    ctx.quadraticCurveTo(x, y, x + radius, y);
-    ctx.closePath();
-    ctx.fill();
-    ctx.stroke();
-}
-
-function updateStack() {
-  ctx.clearRect(0,0,canvas.width,canvas.height);
-  
-  const blockHeight = 30;
-  const radius = 10;
-  const blockWidth = 100;
-
-    stack.forEach((value,index) => {
-        const x = (canvas.width - blockWidth) / 2;
-        const y = canvas.height - (index + 1) * blockHeight;
-        const width = blockWidth;
-        const height = blockHeight - 2;
-
-        ctx.fillStyle = '#C8CBCF';
-        ctx.strokeStyle = 'black';
-        ctx.lineWidth = 2;
-        drawRoundedRect(ctx,x,y,width,height,radius);
-
-        ctx.fillStyle = '#414345';
-        ctx.font = '16px';
-        ctx.textAlign = 'center';
-        ctx.fillText(value,x+width/2,y+height/2+6);
-    });
-}
-
-initStack();
+// 초기화면 그리기
+drawStack();

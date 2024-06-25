@@ -4,13 +4,21 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/queue.css">
     <title>Data Structure Queue</title>
 </head>
 <body>
     <div id="main-container">
         <h1><span>Data Structure Visualization</span></h1>
         <h2>Queue</h2>
-        
+        <div class="structure-container">
+            <div id="queue-draw"></div>
+            <div class="action-button">
+                <button onclick="pushStack()">enqueue</button>
+                <button onclick="popStack()">dequeue</button>
+                <button onclick="initStack()">init</button>
+            </div>
+        </div>
         <a id="back-button" href="main.html" target="_parent">back ></a>
     </div>
 </body>

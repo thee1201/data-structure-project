@@ -94,13 +94,14 @@ img {
     text-align: center;
 }
 
-button {
-    padding: 3px 39px;
-    font-size: 20pt;
-    border: 0;
-    border-radius: 6px;
-    color: #414345;
-    background-color: #a7aaae;
-    margin-inline: 10px;
-    &:hover {background-color: #8b8f94;}
+.blcok {
+    background-color: #c1c3c8;
+    width: 217px;
+    height: 84px;
+    border: solid 6px #414345;
+    border-radius: 15px;
+}
+p {
+    font-size: 30pt;
+    color: #232526;
 }
