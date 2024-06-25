@@ -1,43 +1,44 @@
 let stack = [];
 let nextValue = 1;
 
-const stackElement = document.getElementById('stack-draw');
-
-// 스택 시각화 함수
-function drawStack() {
-    stackElement.innerHTML = '';
-
-    for (let i = stack.length - 1; i >= 0; i--) {
-        const block = document.createElement('div');
-        block.classList.add('block');
-        block.textContent = stack[i];
-        stackElement.appendChild(block);
+function pushStack() {
+    if (stack.length < 4) {
+        stack.push(nextValue++);
+        updateStack();
+    } else {
+        alert('스택이 가득 찼습니다.');
     }
 }
 
-// Push 버튼 클릭 시 호출될 함수
-function pushStack() {
-    stack.push(nextValue);
-    nextValue++;
-    drawStack();
-}
-
-// Pop 버튼 클릭 시 호출될 함수
 function popStack() {
     if (stack.length > 0) {
         stack.pop();
-        drawStack();
+        nextValue--;
+        updateStack();
     } else {
-        alert('Stack is empty!');
+        alert('스택이 비었습니다.')
     }
 }
 
-// Init 버튼 클릭 시 호출될 함수
 function initStack() {
     stack = [];
-    nextValue = 1; // 다음 값 초기화
-    drawStack();
+    nextValue = 1;
+    updateStack();
 }
 
-// 초기화면 그리기
-drawStack();
+function updateStack() {
+    const stackDraw = document.getElementById('stack-draw');
+    stackDraw.innerHTML = ''; // 기존의 div 내용을 지웁니다.
+
+    stack.slice().reverse().forEach(value => {
+        const block = document.createElement('div');
+        block.className = 'block';
+        const p = document.createElement('p');
+        p.textContent = value;
+        block.appendChild(p);
+        stackDraw.appendChild(block);
+    });
+}
+
+// 초기화 함수 호출
+initStack();

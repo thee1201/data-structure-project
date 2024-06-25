@@ -12,8 +12,7 @@
     position: relative;
     display: flex;
     flex-direction: column-reverse;
-    /* justify-content:flex-end; */
-    /* align-items: flex-end; */
+    align-items: center;
 }
 
 button {
@@ -29,7 +28,6 @@ button {
 }
 
 .blcok {
-    margin-left: 7px;
     margin-bottom: 10px;
     text-align: center;
 }

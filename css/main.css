@@ -101,7 +101,7 @@ img {
     border: solid 6px #414345;
     border-radius: 15px;
 }
-p {
+.blcok > p {
     font-size: 30pt;
     color: #232526;
 }
